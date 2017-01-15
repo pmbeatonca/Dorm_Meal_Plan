@@ -1,0 +1,55 @@
+﻿<!--Name: Pablo Martinez-->
+    <!--Project: Dorm and Meal Plan-->    
+    <Window x:Class="Dorm_Meal_Plan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dorm_Meal_Plan"
+        mc:Ignorable="d"
+        Title="Dorm and Meal Plan Calculation" Height="350" Width="850">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!--Create the labels for the rooms and Meals list boxes-->
+        <Viewbox Grid.ColumnSpan="2">
+            <Label Content=" DORM OPTIONS" />
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="2" >
+            <Label Content=" MEALS PLANS" />
+        </Viewbox>
+        <!--Create the list boxes for the options selections-->
+        
+           <!--List box for Room Selection-->
+      
+            <ListBox Name="lsRoom" Margin="10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20">
+                <ListBoxItem > Allen Hall--$1,500 per semester  </ListBoxItem>               
+                <ListBoxItem >Pike Hall--- $1,600 per semester</ListBoxItem>              
+                <ListBoxItem>Farthing Hall--$1,800 per semester</ListBoxItem>           
+                <ListBoxItem>University Suites--$2,500 per semester</ListBoxItem>                 
+            </ListBox>                      
+     
+        <!--List box for Meals Plan Selection-->
+      
+            <ListBox Name="lsMeals" Margin ="10" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20"  >
+                <ListBoxItem >7 meals week--------$600 per semester</ListBoxItem>
+                <ListBoxItem  >14 meals per week---$1,200 per semester</ListBoxItem>
+                <ListBoxItem  >Unlimited meals-----$1,700 per semester</ListBoxItem>                
+            </ListBox>      
+        
+        <!--Create the buttons to calculate the total-->
+       
+            <Button Name="btnCalc" Content="Calculate" Click="btnCalc_Click"  Margin="10" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"/>
+    
+    </Grid>
+</Window>
